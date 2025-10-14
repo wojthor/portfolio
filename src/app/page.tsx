@@ -287,7 +287,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- PROJECTS ---------------- */}
       <section className="relative z-10 container mx-auto px-6 py-20">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm">
