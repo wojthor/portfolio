@@ -57,7 +57,7 @@ export default function ImageSlider({ images }: ImageSliderProps) {
             key={index}
             className={`h-1 w-10 mx-1 ${
               index === currentIndex
-                ? "bg-cyan-400 rounded-xl"
+                ? "bg-[#F7011E] rounded-xl"
                 : "bg-gray-600 rounded-xl"
             } transition-all duration-500 ease-in-out`}
           ></div>

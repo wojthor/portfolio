@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 import { FaReact } from "react-icons/fa";
 import {
   Github,
@@ -8,15 +8,15 @@ import {
   Mail,
   ExternalLink,
 } from "lucide-react";
-import { Button } from "./components/ui/button";
+import { Button } from "../components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./components/ui/tooltip";
+} from "../components/ui/tooltip";
 import { SiTypescript } from "react-icons/si";
-import { Card } from "./components/ui/card";
+import { Card } from "../components/ui/card";
 import ImageSlider from "@/app/components/Slider";
 import { useEffect, useState } from "react";
 
@@ -90,7 +90,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* ---------------- TŁO ---------------- */}
+      
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute left-1/4 top-0 h-[28rem] w-[28rem] rounded-full bg-red-600/20 blur-[120px]" />
         <div className="absolute right-1/4 bottom-0 h-[28rem] w-[28rem] rounded-full bg-red-600/20 blur-[120px]" />
@@ -129,10 +129,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ---------------- HERO ---------------- */}
+      
       <section className="z-10 relative w-screen h-screen flex items-center justify-center px-4 md:px-10 lg:px-32">
         <div className="relative flex flex-col w-full h-full items-center justify-center lg:flex-row lg:justify-center gap-16">
-          {/* Tekst */}
+          \
           <div className="text-center w-full h-full lg:text-left space-y-12 flex flex-col items-center lg:items-start justify-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-2 text-sm uppercase tracking-widest text-[#F7011E] backdrop-blur-sm">
               <span className="relative flex h-3 w-3">
@@ -198,7 +198,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Zdjęcie */}
+        
           <div className="flex justify-center md:w-full md:h-full w-1/2 h-1/2 items-center">
             <img
               src="/photo3.png"
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- ABOUT ---------------- */}
+      
       <section className="relative z-10 container mx-auto px-4 md:px-6 pt-20 md:py-20">
         <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#F7011E]/20 bg-[#F7011E]/5 px-3 py-1 text-xs md:px-4 md:py-1.5 uppercase tracking-widest text-[#F7011E] backdrop-blur-sm">
@@ -244,7 +244,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- TECH STACK ---------------- */}
+    
       <section className="relative z-10 container mx-auto px-6 py-20">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm">
@@ -287,7 +287,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- PROJECTS ---------------- */}
+     
       <section className="relative z-10 container mx-auto px-6 py-20">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm">
@@ -363,7 +363,7 @@ export default function Home() {
         )}
       </section>
 
-      {/* ---------------- CONTACT ---------------- */}
+     
       <section className="relative z-0 container mx-auto px-6 py-20 text-center">
         <div className="inline-flex items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm">
           Contact
@@ -390,3 +390,4 @@ export default function Home() {
     </div>
   );
 }
+  */
