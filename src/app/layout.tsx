@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Wojciech Aniszewski - Software Developer",
   description: "Full Stack Developer specializing in React and Node.js",
   icons: {
-    icon: "/coding.png",
+    icon: "/favicon.ico",
   },
 };
 
