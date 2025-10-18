@@ -4,8 +4,8 @@ export const projects = [
     description:
       "A travel agency website powered by GraphQL, featuring dynamic content management and seamless integration with Next.js.",
     tech: ["Next.js", "TypeScript", "GraphQL", "GraphCMS"],
-    image: "/glob1.png",
-    images: ["/glob1.png", "/glob2.png", "/glob3.png"],
+    image: "/glob-1.PNG",
+    images: ["/glob-1.PNG", "/glob-2.PNG", "/glob-3.PNG"],
   },
   {
     title: "StudioRE [In Progress]",

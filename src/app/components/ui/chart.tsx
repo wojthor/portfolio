@@ -341,12 +341,15 @@ function getPayloadConfigFromPayload(
   let configLabelKey: string = key;
 
   if (
+    payload &&
+    typeof payload === "object" &&
     key in payload &&
     typeof payload[key as keyof typeof payload] === "string"
   ) {
     configLabelKey = payload[key as keyof typeof payload] as string;
   } else if (
     payloadPayload &&
+    typeof payloadPayload === "object" &&
     key in payloadPayload &&
     typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
   ) {
