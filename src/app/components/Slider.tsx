@@ -28,7 +28,7 @@ export default function ImageSlider({ images, onClose }: ImageSliderProps) {
         onClick={onClose}
         aria-label="Close slider"
         className="absolute z-20 right-2 top-3 p-2 rounded-md 
-             bg-black/70 text-[#F7011E] border border-[#F7011E] 
+             bg-black/80 text-[#F7011E] border border-[#F7011E] 
              hover:bg-[#F7011E] hover:text-black 
              hover:shadow-[0_0_10px_#F7011E] 
              transition-all duration-200"
