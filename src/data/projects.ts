@@ -13,7 +13,7 @@ export const projects = [
       "A modern interior design studio website featuring captivating animations and interactive elements.",
     tech: ["React", "Node.js", "Next.js", "Tailwind CSS"],
     image: "/studiore.png",
-    images: ["/studiore.png"],
+    images: ["/studiore.png", "/studiore3.png", "/studiore4.png"],
   },
   {
     title: "Rental Rate",

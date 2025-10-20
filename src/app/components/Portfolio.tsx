@@ -79,14 +79,10 @@ export default function Portfolio() {
       {showSlider !== false && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
           <div className="relative w-full max-w-5xl p-6">
-            <button
-              onClick={() => setShowSlider(false)}
-              className=" hover:border-[#F7011E]/40  items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm"
-            >
-              X
-            </button>
-
-            <ImageSlider images={projects[showSlider].images} />
+            <ImageSlider
+              onClose={() => setShowSlider(false)}
+              images={projects[showSlider].images}
+            />
           </div>
         </div>
       )}

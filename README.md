@@ -1,8 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Next.js App
 
-## Getting Started
+A personal portfolio built with Next.js (App Router). Lightweight starter configured for development, testing, and deployment.
 
-First, run the development server:
+## Features
+
+- Next.js (App Router) with TypeScript
+- Server and client components
+- Optimized font loading with next/font
+- Hot reloading and fast refresh
+- Ready for Vercel deployment
+
+## Tech stack
+
+- Next.js
+- React
+- TypeScript
+- Node.js
+- CSS / Tailwind / your preferred styling (optional)
+
+## Requirements
+
+- Node.js 18+ recommended
+- npm, Yarn, pnpm, or Bun
+
+## Getting started
+
+1. Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+# or
+bun install
+```
+
+2. Run development server:
 
 ```bash
 npm run dev
@@ -14,23 +49,59 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the site. Edit `app/page.tsx` and other files to customize content — the page updates automatically.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+# or
+yarn build && yarn start
+# or
+pnpm build && pnpm start
+```
 
-## Learn More
+## Project structure (typical)
 
-To learn more about Next.js, take a look at the following resources:
+- app/ — Next.js App Router pages and layout
+  - page.tsx — homepage
+  - layout.tsx — root layout
+- components/ — reusable UI components
+- public/ — static assets (images, icons)
+- styles/ — global styles or utilities
+- next.config.js, tsconfig.json, package.json
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Adjust structure to match your codebase as needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Fonts & assets
 
-## Deploy on Vercel
+This project uses next/font to optimize fonts. Update font configuration in `app/layout.tsx` or wherever fonts are imported.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Environment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If your portfolio integrates APIs or analytics, add environment variables in `.env.local`. Example:
+
+```
+NEXT_PUBLIC_ANALYTICS_ID=your_id
+```
+
+## Deployment
+
+Recommended: Vercel
+
+- Push the repo to GitHub/GitLab and import to Vercel
+- Vercel will detect Next.js and provide zero-config deployment
+
+Other hosts that support Next.js are also compatible (Netlify, Render).
+
+## Contributing
+
+- Fork the repo, create a branch, and open a pull request.
+- Keep changes small and documented.
+
+## License
+
+Add a LICENSE file or set a license in package.json (e.g., MIT).
+
+Customize this README with your name, links, and project details.
