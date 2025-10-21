@@ -88,7 +88,7 @@ export default function HeroSection() {
         <div className="flex justify-center md:w-full md:h-full w-1/2 h-1/2 items-center">
           <img
             src="/photo3.png"
-            alt="Avatar"
+            alt="Wojciech Aniszewski - Software Developer"
             className="w-80 md:w-[28rem] lg:w-[40rem] xl:w-[38rem]"
           />
         </div>
