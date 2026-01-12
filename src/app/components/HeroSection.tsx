@@ -53,7 +53,7 @@ export default function HeroSection() {
               asChild
             >
               <a
-                href="https://drive.google.com/file/d/1vnGInrYXAIeZhMHsTVL0Ba_0scyA6Mm5/view?usp=sharing"
+                href="https://drive.google.com/file/d/1MMaQoQ-z5TmmWTkZ76SCp-YMwNktMj5W/view?usp=sharing"
                 target="_blank"
               >
                 <FileText className="mr-3 h-6 w-6" />
