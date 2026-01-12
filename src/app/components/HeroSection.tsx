@@ -16,6 +16,8 @@ const socialIcons: Record<string, JSX.Element> = {
   LinkedIn: <Linkedin className="h-5 w-5" />,
 };
 
+
+
 export default function HeroSection() {
   return (
     <section className="z-10 relative w-screen h-screen flex items-center justify-center px-4 md:px-10 lg:px-32">
