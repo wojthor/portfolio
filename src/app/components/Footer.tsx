@@ -6,7 +6,7 @@ export default function Footer() {
           <p>
             Powered by{" "}
             <span className="text-[#F7011E] font-semibold">
-              Wojciech Aniszewski © 2025
+              Wojciech Aniszewski © {new Date().getFullYear()}
             </span>{" "}
           </p>
           <p>
