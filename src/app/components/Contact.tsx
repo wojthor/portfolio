@@ -4,9 +4,11 @@ import { Button } from "@/app/components/ui/button";
 export default function Contact() {
   return (
     <section className="relative z-0 container mx-auto px-6 py-20 text-center">
-      <div className="inline-flex items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm">
-        Contact
-      </div>
+      <header className="max-w-2xl mx-auto mb-12 md:mb-16 text-center">
+        <div className="inline-flex items-center gap-2 border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs uppercase tracking-widest text-[#F7011E] rounded-full backdrop-blur-sm">
+          Contact
+        </div>
+      </header>
       <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-4">
         <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
           Ready to Start

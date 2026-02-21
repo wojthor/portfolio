@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Github, Linkedin, FileText } from "lucide-react";
+import { Github, Linkedin, LayoutGrid } from "lucide-react";
 import { Button } from "../components/ui/button";
 import {
   Tooltip,
@@ -20,7 +20,7 @@ const socialIcons: Record<string, JSX.Element> = {
 
 export default function HeroSection() {
   return (
-    <section className="z-10 relative w-screen h-screen flex items-center justify-center px-4 md:px-10 lg:px-32">
+    <section className="z-10 relative w-screen h-screen flex items-center justify-center pt-5 px-4 md:px-10 lg:px-32">
       <div className="relative flex flex-col w-full h-full items-center justify-center lg:flex-row lg:justify-center gap-16">
         <div className="text-center w-full h-full lg:text-left space-y-12 flex flex-col items-center lg:items-start justify-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-2 text-sm uppercase tracking-widest text-[#F7011E] backdrop-blur-sm">
@@ -28,7 +28,7 @@ export default function HeroSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#F7011E] opacity-75"></span>
               <span className="relative inline-flex h-3 w-3 rounded-full bg-[#F7011E]"></span>
             </span>
-            Software Developer
+            Freelance Web Developer
           </div>
 
           <div>
@@ -42,9 +42,8 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <p className="mt-8 text-gray-300 text-xl md:text-3xl max-w-2xl">
-              Specializing in building modern web applications with React and
-              Next.js.
+            <p className="mt-8 text-gray-300 text-xl md:text-2xl max-w-2xl">
+            Freelance Full-Stack Developer. I turn your Figma designs into fully functional web applications – from pixel-perfect UI to robust backend architecture.
             </p>
           </div>
 
@@ -54,12 +53,10 @@ export default function HeroSection() {
               className="bg-gradient-to-r from-[#ff4d4d]  to-[#a30000] text-white px-10 py-7 text-lg font-semibold shadow-lg shadow-[#F7011E]/25 hover:shadow-xl hover:shadow-[#F7011E]/40"
               asChild
             >
-              <a
-                href="https://drive.google.com/file/d/1MMaQoQ-z5TmmWTkZ76SCp-YMwNktMj5W/view?usp=sharing"
-                target="_blank"
-              >
-                <FileText className="mr-3 h-6 w-6" />
-                Download Resume
+              <a href="#projects">
+                <LayoutGrid className="mr-3 h-6 w-6" />
+                Featured
+Projects
               </a>
             </Button>
           </div>

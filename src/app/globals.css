@@ -45,6 +45,9 @@
   * {
     @apply border-[hsl(var(--border))];
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }

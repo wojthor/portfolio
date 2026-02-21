@@ -16,19 +16,12 @@ export default function HeroSection() {
 
         <div className="border  hover:border-[#F7011E]/40 transition-all  border-white/10 bg-white/5 rounded-2xl p-4 md:p-8 backdrop-blur-sm text-gray-300 text-base md:text-lg leading-relaxed text-left md:text-center">
           <p>
-            Hello! My name is{" "}
-            <span className="text-[#F7011E] font-semibold">
-              Wojciech Aniszewski
-            </span>
-            , and I’m based in Gdańsk, Poland. I’m passionate about creating
-            elegant, efficient, and modern web experiences.
-          </p>
-          <p className="mt-3 md:mt-4">
-            I work with <span className="text-[#F7011E]">Next.js</span>,{" "}
-            <span className="text-[#F7011E]">React</span>,{" "}
-            <span className="text-[#F7011E]">GraphQL</span>,{" "}
-            <span className="text-[#F7011E]">TypeScript</span>, and{" "}
-            <span className="text-[#F7011E]">Python</span>.
+            Freelance Full-Stack Developer specializing in modern, scalable web
+            applications. From pixel-perfect frontends in{" "}
+            <span className="text-[#F7011E]">React & Next.js</span> to robust
+            backends and APIs in{" "}
+            <span className="text-[#F7011E]">Node.js & Python</span>. Available
+            for B2B collaborations and end-to-end freelance projects.
           </p>
         </div>
       </div>
