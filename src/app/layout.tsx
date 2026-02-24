@@ -40,7 +40,7 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Wojciech Aniszewski - Software Developer",
+  title: "Wojciech Aniszewski - Freelance Web Developer",
   description:
     "Freelancer Web Developer specializing in React, Next.js, and Angular. Full-stack projects with Prisma, Hygraph, Stripe. Collaboration with wilczynska.visuals.",
   keywords: [
@@ -107,9 +107,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wojciech Aniszewski - Software Developer",
+    title: "Wojciech Aniszewski - Freelance Web Developer",
     description:
-      "Freelancer Web Developer. React, Next.js, Angular. Collaboration with wilczynska.visuals. Base Camp, StudioRE, Rental Rate.",
+      "Freelance Web Developer. React, Next.js, Angular. Collaboration with wilczynska.visuals. Base Camp, StudioRE, Rental Rate.",
     images: [`${siteUrl}/photo3.png`],
   },
   icons: {

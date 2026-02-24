@@ -16,12 +16,13 @@ export default function HeroSection() {
 
         <div className="border  hover:border-[#F7011E]/40 transition-all  border-white/10 bg-white/5 rounded-2xl p-4 md:p-8 backdrop-blur-sm text-gray-300 text-base md:text-lg leading-relaxed text-left md:text-center">
           <p>
-            Freelance Full-Stack Developer specializing in modern, scalable web
-            applications. From pixel-perfect frontends in{" "}
-            <span className="text-[#F7011E]">React & Next.js</span> to robust
-            backends and APIs in{" "}
-            <span className="text-[#F7011E]">Node.js & Python</span>. Available
-            for B2B collaborations and end-to-end freelance projects.
+            I specialize in building modern, fast, and scalable digital
+            products. My expertise lies in crafting dynamic user interfaces with{" "}
+            <span className="text-[#F7011E]">React & Next.js</span>, seamlessly
+            integrated with secure APIs built in{" "}
+            <span className="text-[#F7011E]">Node.js & Python</span>. I partner
+            with businesses and design teams to deliver complete web solutions.
+            Available for B2B collaborations and end-to-end freelance projects.
           </p>
         </div>
       </div>
