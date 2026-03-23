@@ -113,7 +113,8 @@ export const metadata: Metadata = {
     images: [`${siteUrl}/photo3.png`],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon-apple.png", type: "image/png" }],
   },
 };
 
