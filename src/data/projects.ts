@@ -9,6 +9,23 @@ export const projects = [
     visitUrl: "https://next13-masters-test.vercel.app",
   },
   {
+    title: "Wiktor Szyszkowski – Landing Page & Newsletter",
+    description:
+      "A high-converting, single-page sales landing built with Next.js and TypeScript for a personal brand. The project combines strong VSL-style structure with performant, responsive UI: Hero, problem framing, authority section, offer breakdown, testimonials, and final CTA. Content is fully centralized in a typed content layer, with smooth anchor navigation, SEO metadata, sitemap/robots support, and newsletter capture integrated with Brevo via secure server actions.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Brevo API",
+      "Gumroad",
+    ],
+    image: "/wikus-projekt1.png",
+    images: ["/wikus-projekt1.png", "/wikus-projekt2.png"],
+    visitUrl: "https://www.wiktorszyszkowski.pl",
+  },
+  {
     title: "Glob Travel Agency",
     description:
       "A travel agency website powered by GraphQL, featuring dynamic content management and seamless integration with Next.js.",

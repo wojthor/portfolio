@@ -82,7 +82,7 @@ export default function Portfolio() {
                         imageLeft ? "" : "lg:ml-auto lg:inline-flex"
                       }`}
                     >
-                      Visit Base Camp →
+                      Visit Project →
                     </a>
                   )}
                   <div
