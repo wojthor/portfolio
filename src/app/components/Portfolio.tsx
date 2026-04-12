@@ -32,7 +32,12 @@ export default function Portfolio() {
             return (
               <article
                 key={i}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-12 md:py-16 border-b border-white/10 last:border-b-0 items-center"
+                id={
+                  "anchorId" in project && project.anchorId
+                    ? project.anchorId
+                    : undefined
+                }
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-12 md:py-16 border-b border-white/10 last:border-b-0 items-center scroll-mt-24"
               >
                 {/* Slider - 16:9, obok opisu */}
                 <div
@@ -73,17 +78,34 @@ export default function Portfolio() {
                         </a>
                       )}
                   </p>
-                  {"visitUrl" in project && project.visitUrl && (
-                    <a
-                      href={project.visitUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`mt-5 w-1/3 inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold text-white bg-[#F7011E] hover:bg-[#F7011E]/90 border border-[#F7011E] hover:border-white/40 transition-all duration-200 hover:scale-[1.03] ${
-                        imageLeft ? "" : "lg:ml-auto lg:inline-flex"
+                  {(("visitUrl" in project && project.visitUrl) ||
+                    ("reviewsSectionId" in project &&
+                      project.reviewsSectionId)) && (
+                    <div
+                      className={`mt-5 flex flex-wrap items-center gap-3 ${
+                        imageLeft ? "" : "lg:justify-end"
                       }`}
                     >
-                      Visit Project →
-                    </a>
+                      {"visitUrl" in project && project.visitUrl && (
+                        <a
+                          href={project.visitUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold text-white bg-[#F7011E] hover:bg-[#F7011E]/90 border border-[#F7011E] hover:border-white/40 transition-all duration-200 hover:scale-[1.03]"
+                        >
+                          Visit Project →
+                        </a>
+                      )}
+                      {"reviewsSectionId" in project &&
+                        project.reviewsSectionId && (
+                          <a
+                            href={`#${project.reviewsSectionId}`}
+                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold text-gray-200 border border-white/20 hover:border-[#F7011E]/50 hover:text-white hover:bg-white/5 transition-all duration-200"
+                          >
+                            See reviews
+                          </a>
+                        )}
+                    </div>
                   )}
                   <div
                     className={`flex flex-wrap gap-2 mt-6 ${

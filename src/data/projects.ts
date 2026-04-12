@@ -24,6 +24,8 @@ export const projects = [
     image: "/wikus-projekt1.png",
     images: ["/wikus-projekt1.png", "/wikus-projekt2.png"],
     visitUrl: "https://www.wiktorszyszkowski.pl",
+    anchorId: "wiktor-landing",
+    reviewsSectionId: "testimonial",
   },
   {
     title: "Glob Travel Agency",
