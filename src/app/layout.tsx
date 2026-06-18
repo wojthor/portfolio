@@ -10,7 +10,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Wojciech Aniszewski",
-  jobTitle: "Freelancer Web Developer",
+  jobTitle: "Freelance Developer",
   url: siteUrl,
   image: `${siteUrl}/photo3.png`,
   email: "mailto:wojtek1aniszewski1@gmail.com",
@@ -26,23 +26,24 @@ const structuredData = {
   knowsAbout: [
     "React",
     "Next.js",
-    "Angular",
     "TypeScript",
+    "Node.js",
     "GraphQL",
     "Python",
+    "BigQuery",
+    "Dataform",
+    "SQL",
     "Prisma",
-    "Hygraph",
     "Stripe",
-    "Node.js",
     "Tailwind CSS",
   ],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Wojciech Aniszewski - Freelance Web Developer",
+  title: "Wojciech Aniszewski - Freelance Developer",
   description:
-    "Freelancer Web Developer specializing in React, Next.js, and Angular. Full-stack projects with Prisma, Hygraph, Stripe. Collaboration with wilczynska.visuals.",
+    "Freelance developer from Gdańsk. React, Next.js, BigQuery, SQL. Web apps and data pipelines.",
   keywords: [
     "Wojciech Aniszewski",
     "Aniszewski",
@@ -91,25 +92,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Wojciech Aniszewski - Software Developer",
+    title: "Wojciech Aniszewski - Freelance Developer",
     description:
-      "Freelancer Web Developer from Gdańsk. React, Next.js, Angular. Projects: Base Camp e-commerce, StudioRE (with wilczynska.visuals), Rental Rate. Prisma, Hygraph, Stripe.",
+      "Web development and data engineering. React, Next.js, BigQuery, Dataform. Projects: Unschool Your English, Base Camp, StudioRE.",
     siteName: "Wojciech Aniszewski Portfolio",
     images: [
       {
         url: `${siteUrl}/photo3.png`,
         width: 1280,
         height: 720,
-        alt: "Wojciech Aniszewski - Software Developer",
+        alt: "Wojciech Aniszewski - Freelance Developer",
       },
     ],
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wojciech Aniszewski - Freelance Web Developer",
+    title: "Wojciech Aniszewski - Freelance Developer",
     description:
-      "Freelance Web Developer. React, Next.js, Angular. Collaboration with wilczynska.visuals. Base Camp, StudioRE, Rental Rate.",
+      "Freelance developer. React, Next.js, BigQuery. Web apps and data pipelines from Gdańsk.",
     images: [`${siteUrl}/photo3.png`],
   },
   icons: {
