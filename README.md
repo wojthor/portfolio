@@ -1,4 +1,4 @@
-# Portfolio — Next.js App
+# Portfolio - Next.js App
 
 A personal portfolio built with Next.js (App Router). Lightweight starter configured for development, testing, and deployment.
 
@@ -49,7 +49,7 @@ pnpm dev
 bun dev
 ```
 
-Open http://localhost:3000 to view the site. Edit `app/page.tsx` and other files to customize content — the page updates automatically.
+Open http://localhost:3000 to view the site. Edit `app/page.tsx` and other files to customize content - the page updates automatically.
 
 ## Build & production
 
@@ -64,12 +64,12 @@ pnpm build && pnpm start
 
 ## Project structure (typical)
 
-- app/ — Next.js App Router pages and layout
-  - page.tsx — homepage
-  - layout.tsx — root layout
-- components/ — reusable UI components
-- public/ — static assets (images, icons)
-- styles/ — global styles or utilities
+- app/ - Next.js App Router pages and layout
+  - page.tsx - homepage
+  - layout.tsx - root layout
+- components/ - reusable UI components
+- public/ - static assets (images, icons)
+- styles/ - global styles or utilities
 - next.config.js, tsconfig.json, package.json
 
 Adjust structure to match your codebase as needed.

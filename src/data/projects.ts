@@ -12,9 +12,9 @@ export type Project = {
 };
 
 export type SlideImage = {
-  /** Ścieżka w public/ — patrz docs/UNSCHOOL-ZDJECIA.md */
+  /** Ścieżka w public/ - patrz docs/UNSCHOOL-ZDJECIA.md */
   src: string;
-  /** Opis kadru — trafia do alt i podpisu pod sliderem */
+  /** Opis kadru - trafia do alt i podpisu pod sliderem */
   alt: string;
 };
 
@@ -23,9 +23,9 @@ export const flagshipProject = {
   subtitle: "E-learning Platform & High-Converting Sales Funnel",
   client: "Wiktor Szyszkowski",
   description:
-    "A production-ready e-learning ecosystem built from scratch for an English coaching brand — not just a landing page, but a complete digital product. I designed and delivered the full stack: a VSL sales funnel that converts visitors into paying students, and a custom learning platform where they access courses, submit voice recordings, and track their progress.",
+    "A production-ready e-learning ecosystem built from scratch for an English coaching brand - not just a landing page, but a complete digital product. I designed and delivered the full stack: a VSL sales funnel that converts visitors into paying students, and a custom learning platform where they access courses, submit voice recordings, and track their progress.",
   scope:
-    "From the first pixel on the landing page to the last webhook in Stripe — one developer, one codebase, end-to-end ownership. The admin team manages everything through a bespoke Payload CMS 3.0 panel: courses, enrolments, voice recordings stored on Vercel Blob, and student feedback — without touching code.",
+    "From the first pixel on the landing page to the last webhook in Stripe - one developer, one codebase, end-to-end ownership. The admin team manages everything through a bespoke Payload CMS 3.0 panel: courses, enrolments, voice recordings stored on Vercel Blob, and student feedback - without touching code.",
   highlights: [
     {
       title: "VSL Sales Landing",
@@ -35,7 +35,7 @@ export const flagshipProject = {
     {
       title: "Stripe & Webhooks",
       description:
-        "Checkout flow with automated access control — payment instantly unlocks the student dashboard.",
+        "Checkout flow with automated access control - payment instantly unlocks the student dashboard.",
     },
     {
       title: "Student Dashboard",
@@ -50,7 +50,7 @@ export const flagshipProject = {
     {
       title: "Vercel Blob Media",
       description:
-        "Secure upload pipeline for student voice recordings — stored, served, and managed at scale.",
+        "Secure upload pipeline for student voice recordings - stored, served, and managed at scale.",
     },
     {
       title: "PostgreSQL Backend",
@@ -70,31 +70,31 @@ export const flagshipProject = {
   slides: [
     {
       src: "/wikus-projekt1.png",
-      alt: "VSL Sales Landing — hero: główny nagłówek, krótki opis oferty, przycisk CTA i górna nawigacja anchor",
+      alt: "VSL Sales Landing - hero: główny nagłówek, krótki opis oferty, przycisk CTA i górna nawigacja anchor",
     },
     {
       src: "/wikus-projekt2.png",
-      alt: "VSL Sales Landing — środek strony: sekcja problemu, autorytet, rozbicie oferty lub testimoniale",
+      alt: "VSL Sales Landing - środek strony: sekcja problemu, autorytet, rozbicie oferty lub testimoniale",
     },
     {
       src: "/unschool-stripe.png",
-      alt: "Stripe & Webhooks — ekran Stripe Checkout z podsumowaniem zamówienia lub strona sukcesu po płatności",
+      alt: "Stripe & Webhooks - ekran Stripe Checkout z podsumowaniem zamówienia lub strona sukcesu po płatności",
     },
     {
       src: "/unschool-dashboard.png",
-      alt: "Student Dashboard — widok zalogowanego ucznia: lista kursów, postęp lekcji i nawigacja po materiałach",
+      alt: "Student Dashboard - widok zalogowanego ucznia: lista kursów, postęp lekcji i nawigacja po materiałach",
     },
     {
       src: "/unschool-admin.png",
-      alt: "Payload CMS Admin — panel administracyjny: lista kursów, lekcji lub zarządzanie studentami",
+      alt: "Payload CMS Admin - panel administracyjny: lista kursów, lekcji lub zarządzanie studentami",
     },
     {
       src: "/unschool-voice.png",
-      alt: "Vercel Blob Media — interfejs nagrywania/wysyłki voice recordingu lub podgląd przesłanych nagrań",
+      alt: "Vercel Blob Media - interfejs nagrywania/wysyłki voice recordingu lub podgląd przesłanych nagrań",
     },
     {
       src: "/unschool-enrolments.png",
-      alt: "PostgreSQL Backend — widok zapisów na kursy, statusów uczniów lub relacji danych w panelu admina",
+      alt: "PostgreSQL Backend - widok zapisów na kursy, statusów uczniów lub relacji danych w panelu admina",
     },
   ] satisfies SlideImage[],
   visitUrl: "https://www.wiktorszyszkowski.pl",

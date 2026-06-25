@@ -70,7 +70,7 @@ export type Translations = {
     experience: {
       period: string;
       role: string;
-      company: string;
+      company?: string | null;
       current?: boolean;
       logo?: string;
     }[];
@@ -149,7 +149,7 @@ export const translations: Record<Locale, Translations> = {
       badge: "Info",
       title: "About",
       titleAccent: "Me",
-      body: "I work across web development and data engineering. On the web side: React, Next.js, Node.js, and integrations with CMS platforms and payment systems. On the data side: BigQuery pipelines, Dataform, SQL automation, and Looker Studio dashboards. I work with businesses directly - B2B or end-to-end freelance.",
+      body: "I'm a web developer from Gdańsk specialising in building web applications from scratch and data science. I pick up new technologies fast and do my best work on projects that need building from the ground up - whether that's a web app in React and Next.js or a data pipeline in BigQuery on Google Cloud Platform.",
       experienceTitle: "Experience",
       experience: [
         {
@@ -160,9 +160,9 @@ export const translations: Record<Locale, Translations> = {
           logo: "/Logo_Impel_Group.jpg",
         },
         {
-          period: "2022 - now",
+          period: "2023 - now",
           role: "Freelance Developer",
-          company: "Web & data projects",
+          company: null,
         },
       ],
     },
@@ -197,7 +197,7 @@ export const translations: Record<Locale, Translations> = {
             "Python",
             "SQL",
             "BigQuery",
-            "Looker Studio",
+            "Data Studio",
             "Dataform",
             "Google Cloud Platform",
           ],
@@ -216,7 +216,7 @@ export const translations: Record<Locale, Translations> = {
           id: "01",
           title: "Unschool Your English",
           shortDescription:
-            "Complete e-learning platform and VSL sales funnel. Built from scratch with a custom CMS panel, database, and payment integration.",
+            "E-learning platform and landing page for Wiktor Szyszkowski. Built with a custom admin panel, student dashboard, and Stripe payment integration with automated access provisioning via webhooks.",
           tech: [
             "Next.js",
             "TypeScript",
@@ -276,7 +276,7 @@ export const translations: Record<Locale, Translations> = {
     },
     offer: {
       sectionBadge: "SERVICES & PRICING",
-      sectionTitle: "Two areas, one person",
+      sectionTitle: "What I do",
       gateways: {
         web: "Web Development",
         data: "Data & Analytics",
@@ -351,7 +351,7 @@ export const translations: Record<Locale, Translations> = {
       badge: "Info",
       title: "O",
       titleAccent: "mnie",
-      body: "Pracuję na styku web developmentu i inżynierii danych. Od strony web: React, Next.js, Node.js, integracje z CMS-ami i systemami płatności. Od strony danych: pipeline'y BigQuery, Dataform, automatyzacja SQL i dashboardy w Looker Studio. Współpracuję bezpośrednio z firmami - B2B lub projekty freelancerskie od A do Z.",
+      body: "Jestem web developerem z Gdańska, który specjalizuje się w budowaniu aplikacji webowych i data science. Szybko przyswajam nowe technologie i najlepiej czuję się w projektach, gdzie jest coś do ogarnięcia od zera - czy to aplikacja w React i Next.js, czy pipeline danych w BigQuery na Google Cloud Platform.",
       experienceTitle: "Doświadczenie",
       experience: [
         {
@@ -362,9 +362,9 @@ export const translations: Record<Locale, Translations> = {
           logo: "/Logo_Impel_Group.jpg",
         },
         {
-          period: "2022 - obecnie",
+          period: "2023 - obecnie",
           role: "Freelance Developer",
-          company: "Projekty web i dane",
+          company: null,
         },
       ],
     },
@@ -399,7 +399,7 @@ export const translations: Record<Locale, Translations> = {
             "Python",
             "SQL",
             "BigQuery",
-            "Looker Studio",
+            "Data Studio",
             "Dataform",
             "Google Cloud Platform",
           ],
@@ -418,7 +418,7 @@ export const translations: Record<Locale, Translations> = {
           id: "01",
           title: "Unschool Your English",
           shortDescription:
-            "Kompletna platforma e-learningowa i lejek sprzedażowy VSL. Zbudowana od podstaw z autorskim panelem CMS, bazą danych i integracją płatności.",
+            "Platforma e-learningowa i landing page dla Wiktora Szyszkowskiego. Zbudowana z autorskim panelem admina, panelem ucznia i integracją płatności Stripe z automatycznym przyznawaniem dostępu przez webhooki.",
           tech: [
             "Next.js",
             "TypeScript",
@@ -478,7 +478,7 @@ export const translations: Record<Locale, Translations> = {
     },
     offer: {
       sectionBadge: "USŁUGI I CENNIK",
-      sectionTitle: "Dwa obszary, jedna osoba",
+      sectionTitle: "Czym się zajmuję",
       gateways: {
         web: "Tworzenie stron i aplikacji",
         data: "Analityka i dane",
@@ -513,7 +513,7 @@ export const translations: Record<Locale, Translations> = {
       title: "Zaufane",
       titleAccent: "słowa",
       paragraphs: [
-        "Z całego serca polecam współpracę z Wojtkiem. Cały landing powstał dokładnie tak, jak chciałem — zgodnie z moimi wymaganiami. Powiedziałbym nawet, że wyszedł lepiej, niż się spodziewałem. Strona została ukończona bardzo szybko, jest niezwykle intuicyjna w obsłudze i jestem bardzo zadowolony z efektu końcowego.",
+        "Z całego serca polecam współpracę z Wojtkiem. Cały landing powstał dokładnie tak, jak chciałem - zgodnie z moimi wymaganiami. Powiedziałbym nawet, że wyszedł lepiej, niż się spodziewałem. Strona została ukończona bardzo szybko, jest niezwykle intuicyjna w obsłudze i jestem bardzo zadowolony z efektu końcowego.",
         "Gdy potrzebowałem jakichkolwiek zmian, wszystkie były wdrażane od razu. Wojtek dodatkowo proponuje wiele ciekawych rozwiązań, które realnie poprawiają stronę. Dla mnie ogromną zaletą było to, że zależało mu na jak najlepszym rezultacie.",
         "Gorąco go polecam!",
       ],

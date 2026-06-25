@@ -1,11 +1,11 @@
 import { clsx, type ClassValue } from "clsx";
 import type { ReactNode } from "react";
 
-/** Nagłówki sekcji — zapowiadają część strony */
+/** Nagłówki sekcji - zapowiadają część strony */
 export const SECTION_BADGE =
   "inline-block rounded-full border border-[#F7011E]/20 bg-[#F7011E]/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[#F7011E] backdrop-blur-sm";
 
-/** Chipy wewnątrz kart / paneli — technologie, tagi */
+/** Chipy wewnątrz kart / paneli - technologie, tagi */
 export const ACCENT_CHIP =
   "rounded-full border border-[#F7011E]/20 bg-[#F7011E]/5 px-3 py-1 text-xs text-[#F7011E]";
 

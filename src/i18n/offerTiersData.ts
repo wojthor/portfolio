@@ -148,7 +148,7 @@ export const offerTiersEn: OfferExtras = {
     {
       name: "Dashboard",
       description:
-        "Looker Studio dashboard wired to your data sources - KPIs on one screen.",
+        "Data Studio dashboard wired to your data sources - KPIs on one screen.",
       price: "from 600 PLN",
       deliveryTime: "3–7 days",
       features: [
@@ -180,7 +180,7 @@ export const offerTiersEn: OfferExtras = {
       examplesLabel: "EXAMPLES:",
       examples:
         "GA4 traffic & conversion dashboard, Stripe revenue report, Google Ads spend vs. results, weekly sales summary from Sheets",
-      tech: ["Looker Studio", "BigQuery", "Google Sheets"],
+      tech: ["Data Studio", "BigQuery", "Google Sheets"],
       cardAction: "Get in touch →",
     },
     {
@@ -212,7 +212,7 @@ export const offerTiersEn: OfferExtras = {
         },
         {
           title: "Dashboard-ready output",
-          desc: "Final views plugged straight into Looker Studio or your BI tool.",
+          desc: "Final views plugged straight into Data Studio or your BI tool.",
         },
       ],
       examplesLabel: "EXAMPLES:",
@@ -250,13 +250,13 @@ export const offerTiersEn: OfferExtras = {
         },
         {
           title: "Dashboard connection",
-          desc: "New database wired to Looker Studio so reports update automatically.",
+          desc: "New database wired to Data Studio so reports update automatically.",
         },
       ],
       examplesLabel: "EXAMPLES:",
       examples:
         "Excel → PostgreSQL, multi-department cost tracker, inventory spreadsheets → shared database, team reporting hub",
-      tech: ["PostgreSQL", "BigQuery", "Looker Studio", "SQL"],
+      tech: ["PostgreSQL", "BigQuery", "Data Studio", "SQL"],
       cardAction: "Get in touch →",
     },
   ],
@@ -390,7 +390,7 @@ export const offerTiersPl: OfferExtras = {
     {
       name: "Dashboard",
       description:
-        "Dashboard Looker Studio podpięty pod Twoje źródła danych - KPI na jednym ekranie.",
+        "Dashboard Data Studio podpięty pod Twoje źródła danych - KPI na jednym ekranie.",
       price: "od 600 zł",
       deliveryTime: "3–7 dni",
       features: [
@@ -422,7 +422,7 @@ export const offerTiersPl: OfferExtras = {
       examplesLabel: "PRZYKŁADY:",
       examples:
         "Dashboard ruchu i konwersji GA4, raport przychodów , Google Ads: wydatki vs. wyniki, tygodniowe podsumowanie sprzedaży z arkuszy",
-      tech: ["Looker Studio", "BigQuery", "Google Sheets"],
+      tech: ["Data Studio", "BigQuery", "Google Sheets"],
       cardAction: "Napisz do mnie →",
     },
     {
@@ -454,7 +454,7 @@ export const offerTiersPl: OfferExtras = {
         },
         {
           title: "Dane gotowe do dashboardu",
-          desc: "Gotowe widoki podpięte wprost do Looker Studio lub innego narzędzia BI.",
+          desc: "Gotowe widoki podpięte wprost do Data Studio lub innego narzędzia BI.",
         },
       ],
       examplesLabel: "PRZYKŁADY:",
@@ -492,13 +492,13 @@ export const offerTiersPl: OfferExtras = {
         },
         {
           title: "Podłączenie dashboardu",
-          desc: "Nowa baza podpięta do Looker Studio - raporty aktualizują się same.",
+          desc: "Nowa baza podpięta do Data Studio - raporty aktualizują się same.",
         },
       ],
       examplesLabel: "PRZYKŁADY:",
       examples:
         "Excel → PostgreSQL, tracker kosztów z wielu działów, arkusze magazynowe → wspólna baza, hub raportowania zespołu",
-      tech: ["PostgreSQL", "BigQuery", "Looker Studio", "SQL"],
+      tech: ["PostgreSQL", "BigQuery", "Data Studio", "SQL"],
       cardAction: "Napisz do mnie →",
     },
   ],

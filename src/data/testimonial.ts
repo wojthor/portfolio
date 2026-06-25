@@ -1,4 +1,4 @@
-/** Featured client testimonial — portrait in `public/image.png` */
+/** Featured client testimonial - portrait in `public/image.png` */
 export const featuredTestimonialAuthor = {
   fullName: "Wiktor Szyszkowski",
   avatarSrc: "/image.png",
