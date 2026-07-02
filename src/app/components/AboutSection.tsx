@@ -58,7 +58,7 @@ export default function AboutSection() {
                     {item.logo ? (
                       <Image
                         src={item.logo}
-                        alt={item.company}
+                        alt={item.company ?? item.role}
                         width={120}
                         height={36}
                         className="mt-2 h-9 w-auto max-w-[140px] rounded-sm object-contain object-left"
