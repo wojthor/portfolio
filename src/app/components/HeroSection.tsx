@@ -1,14 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
 import { Github, Linkedin, LayoutGrid, Download, ChevronDown } from "lucide-react";
 import { Button } from "../components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../components/ui/tooltip";
 import { socialLinks } from "@/data/socials";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
@@ -24,9 +18,13 @@ export default function HeroSection() {
     <section className="z-10 relative w-screen h-screen flex items-center justify-center overflow-hidden pt-3 pb-3 px-4 md:px-10 md:overflow-visible md:min-h-screen md:h-auto md:py-12 lg:pt-5 lg:pb-12 lg:px-32">
       <div className="relative flex flex-col w-full h-full min-h-0 items-center justify-between md:justify-center lg:flex-row lg:justify-center gap-4 md:gap-8 lg:gap-16 lg:h-full lg:max-h-[none]">
         <div className="hero-enter hero-enter-delay-0 order-1 lg:order-2 flex justify-center w-full shrink-0 h-1/2 min-h-[140px] md:h-auto lg:w-auto lg:h-full lg:items-center">
-          <img
+          <Image
             src="/photo3.png"
             alt={t.hero.photoAlt}
+            width={960}
+            height={960}
+            priority
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 40rem"
             className="h-full w-full object-contain md:max-w-[28rem] lg:w-[40rem] lg:max-w-none lg:h-auto xl:w-[38rem]"
           />
         </div>
@@ -81,25 +79,19 @@ export default function HeroSection() {
           </div>
 
           <div className="hero-enter hero-enter-delay-4 flex justify-center lg:justify-start gap-3 md:gap-5">
-            <TooltipProvider>
-              {socialLinks.map((social, i) => (
-                <Tooltip key={i}>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-11 w-11 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:text-[#F7011E] hover:border-[#F7011E]/40 hover:bg-[#F7011E]/10 md:h-16 md:w-16 text-xl md:text-2xl"
-                      asChild
-                    >
-                      <a href={social.href} target="_blank">
-                        {socialIcons[social.label]}
-                      </a>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>{social.label}</TooltipContent>
-                </Tooltip>
-              ))}
-            </TooltipProvider>
+            {socialLinks.map((social, i) => (
+              <Button
+                key={i}
+                variant="ghost"
+                size="icon"
+                className="h-11 w-11 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:text-[#F7011E] hover:border-[#F7011E]/40 hover:bg-[#F7011E]/10 md:h-16 md:w-16 text-xl md:text-2xl"
+                asChild
+              >
+                <a href={social.href} target="_blank" aria-label={social.label}>
+                  {socialIcons[social.label]}
+                </a>
+              </Button>
+            ))}
           </div>
         </div>
       </div>

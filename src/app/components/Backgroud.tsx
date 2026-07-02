@@ -1,9 +1,9 @@
 export default function Backgroud() {
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
-      <div className="absolute left-1/4 top-0 h-[28rem] w-[28rem] rounded-full bg-red-600/20 blur-[120px]" />
-      <div className="absolute right-1/4 bottom-0 h-[28rem] w-[28rem] rounded-full bg-red-600/20 blur-[120px]" />
-      <div className="w-full h-full pointer-events-none absolute inset-0">
+      <div className="absolute left-1/4 top-0 h-[14rem] w-[14rem] rounded-full bg-red-600/15 blur-[80px] md:h-[28rem] md:w-[28rem] md:bg-red-600/20 md:blur-[120px]" />
+      <div className="absolute right-1/4 bottom-0 h-[14rem] w-[14rem] rounded-full bg-red-600/15 blur-[80px] md:h-[28rem] md:w-[28rem] md:bg-red-600/20 md:blur-[120px]" />
+      <div className="absolute inset-0 hidden h-full w-full pointer-events-none md:block">
         <svg width="100%" height="100%" className="w-full h-full">
           <defs>
             <pattern

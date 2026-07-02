@@ -139,7 +139,7 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       photoAlt: "Wojciech Aniszewski - Software Developer",
-      badge: "Freelance Developer",
+      badge: "Web Developer",
       tagline:
         "I build web apps and data pipelines. React and Next.js on the front, BigQuery and SQL on the back - whatever your project needs.",
       featuredProjects: "Featured Projects",
@@ -341,7 +341,7 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       photoAlt: "Wojciech Aniszewski - Programista",
-      badge: "Freelance Developer",
+      badge: "Web Developer",
       tagline:
         "Buduję aplikacje webowe i pipeline'y danych. React i Next.js od strony frontu, BigQuery i SQL od strony danych - w zależności od tego, czego projekt wymaga.",
       featuredProjects: "Wybrane projekty",
