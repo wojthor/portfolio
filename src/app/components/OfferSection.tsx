@@ -88,9 +88,9 @@ function BenefitGrid({ label, features }: { label: string; features: OfferFeatur
         {features.map((feature, idx) => (
           <div
             key={feature.title}
-            className="rounded-lg border border-white/10 bg-white/[0.03] px-3.5 py-3"
+            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] px-4 py-3.5 transition-colors hover:border-[#F7011E]/30"
           >
-            <span className="text-[11px] font-medium tabular-nums text-[#F7011E]">
+            <span className="font-mono text-[11px] font-medium tabular-nums text-[#F7011E]">
               {String(idx + 1).padStart(2, "0")}
             </span>
             <p className="mt-1 text-sm font-medium leading-snug text-white">{feature.title}</p>
@@ -193,10 +193,10 @@ function GatewayCard({
       <button
         type="button"
         onClick={onClick}
-        className={`group absolute inset-0 flex cursor-pointer items-center justify-center rounded-xl border backdrop-blur-sm transition-all duration-500 md:-skew-x-[15deg] md:rounded-none ${
+        className={`surface group absolute inset-0 flex cursor-pointer items-center justify-center rounded-3xl transition-all duration-500 md:-skew-x-[15deg] md:rounded-none ${
           isActive
-            ? "border-[#F7011E]/40 bg-white/10 shadow-[0_0_30px_-10px_rgba(247,1,30,0.3)]"
-            : "border-white/10 bg-white/5 hover:border-[#F7011E]/40 hover:bg-white/10 hover:shadow-[0_0_40px_-10px_rgba(247,1,30,0.35)]"
+            ? "!border-[#F7011E]/45 shadow-[0_0_50px_-15px_rgba(247,1,30,0.45)]"
+            : "hover:!border-[#F7011E]/40 hover:shadow-[0_0_50px_-15px_rgba(247,1,30,0.4)]"
         }`}
       >
         <div className="flex flex-col items-center px-5 py-6 text-center md:skew-x-[15deg] md:px-8 md:py-8">
@@ -208,7 +208,7 @@ function GatewayCard({
             {icon}
           </span>
           <h3
-            className={`text-xl font-bold transition-colors md:text-2xl lg:text-3xl ${
+            className={`text-xl font-semibold transition-colors md:text-2xl lg:text-3xl ${
               isActive ? "text-[#F7011E]" : "text-white group-hover:text-[#F7011E]"
             }`}
           >
@@ -272,7 +272,7 @@ function OfferMasterDetail({
   const mailtoHref = tierMailto(mailtoSubject, mailtoTopic);
 
   return (
-    <div className="mx-auto my-3 flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a] lg:flex-row">
+    <div className="surface mx-auto my-3 flex w-full max-w-6xl flex-col overflow-hidden rounded-3xl !bg-[#0a0a0a]/90 lg:flex-row">
       <div className="w-full shrink-0 border-b border-white/10 lg:w-[26%] lg:border-b-0 lg:border-r">
         <div className="px-5 py-4">
           <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.2em] text-gray-500">
@@ -463,11 +463,11 @@ export default function OfferSection() {
     selectedTab === "data" ? offer.servicesNav.data : offer.servicesNav.web;
 
   return (
-    <section id="offer" className="relative z-10 border-t border-white/10 py-16 md:py-20">
+    <section id="offer" className="section-line relative z-10 py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <header className="mb-10 text-center md:mb-12">
           <SectionBadge className="mb-4">{offer.sectionBadge}</SectionBadge>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
             {offer.sectionTitle}
           </h2>
         </header>

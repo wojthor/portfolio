@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div
-      className="fixed top-4 right-4 z-50 flex items-center gap-1 rounded-full border border-white/10 bg-black/60 p-1 backdrop-blur-md shadow-lg"
+      className="surface fixed top-4 right-4 z-50 flex items-center gap-1 rounded-full !bg-black/60 p-1"
       role="group"
       aria-label={t.languageSwitcher.label}
     >

@@ -11,8 +11,8 @@ const AUTO_PLAY_MS = 5000;
 
 function BrowserMockup({ project }: { project: PortfolioProject }) {
   return (
-    <div className="w-full overflow-hidden rounded-t-xl border border-b-0 border-white/10 bg-black/30 shadow-2xl backdrop-blur-sm">
-      <div className="flex h-8 items-center gap-1.5 border-b border-white/5 bg-white/5 px-3 backdrop-blur-sm">
+    <div className="w-full overflow-hidden rounded-t-2xl border border-b-0 border-white/10 bg-black/40 shadow-[0_-20px_80px_-30px_rgba(247,1,30,0.35)]">
+      <div className="flex h-8 items-center gap-1.5 border-b border-white/5 bg-white/[0.04] px-3">
         <div className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
         <div className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
         <div className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
@@ -55,7 +55,7 @@ function SlideContent({
       </span>
 
       <div className="mb-3 flex flex-wrap items-center gap-3">
-        <h3 className="text-2xl font-bold tracking-tight text-white md:text-3xl lg:text-4xl">
+        <h3 className="text-2xl font-semibold text-white md:text-3xl lg:text-4xl">
           {project.title}
         </h3>
         {project.inProgress && (
@@ -85,7 +85,7 @@ function SlideContent({
             href={project.visitUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl bg-[#F7011E] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#d9001a]"
+            className="btn-glow inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#ff2a3f] to-[#c20016] px-6 py-2.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5"
           >
             {visitLabel}
           </a>
@@ -93,7 +93,7 @@ function SlideContent({
         {project.reviewAnchor && (
           <a
             href={`#${project.reviewAnchor}`}
-            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-[#F7011E]/40 hover:bg-white/10"
+            className="surface inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:border-[#F7011E]/40"
           >
             {clientReviewLabel}
           </a>
@@ -150,15 +150,15 @@ export default function Portfolio() {
   const project = projects[currentSlide];
 
   return (
-    <section id="projects" className="relative z-10 border-t border-white/10">
+    <section id="projects" className="section-line relative z-10">
       <div className="container mx-auto px-4 pb-10 pt-16 md:px-6 md:pb-12 md:pt-20">
         <header className="text-center">
           <SectionBadge className="mb-4">{portfolio.badge}</SectionBadge>
           <div className="flex justify-center gap-2">
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
               {portfolio.title}
             </h2>
-            <h2 className="text-3xl font-bold tracking-tight text-[#F7011E] md:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-semibold text-[#F7011E] md:text-4xl lg:text-5xl">
               {portfolio.titleAccent}
             </h2>
           </div>
@@ -171,8 +171,8 @@ export default function Portfolio() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
-            <div className="grid grid-cols-1 gap-8 px-5 pt-8 md:px-8 md:pt-10 lg:grid-cols-12 lg:items-end lg:gap-10">
+          <div className="surface overflow-hidden rounded-[2rem]">
+            <div className="grid grid-cols-1 gap-8 px-5 pt-8 md:px-10 md:pt-12 lg:grid-cols-12 lg:items-end lg:gap-12">
               <div className="pb-8 md:pb-10 lg:col-span-5 lg:self-start">
                 <SlideContent
                   project={project}
@@ -197,7 +197,7 @@ export default function Portfolio() {
               type="button"
               onClick={prevSlide}
               aria-label={t.slider.prev}
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-[#F7011E] hover:bg-[#F7011E]"
+              className="surface flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white transition-colors hover:border-[#F7011E] hover:bg-[#F7011E]"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -223,7 +223,7 @@ export default function Portfolio() {
               type="button"
               onClick={nextSlide}
               aria-label={t.slider.next}
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-[#F7011E] hover:bg-[#F7011E]"
+              className="surface flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white transition-colors hover:border-[#F7011E] hover:bg-[#F7011E]"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

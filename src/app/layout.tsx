@@ -1,9 +1,19 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({ subsets: ["latin", "latin-ext"], display: "swap" });
+const geist = Geist({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-display",
+});
+const geistMono = Geist_Mono({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-mono",
+});
 const siteUrl = "https://aniszewski-code.pl";
 
 const structuredData = {
@@ -14,7 +24,7 @@ const structuredData = {
   description:
     "Web developer from Gdańsk specialising in web applications, data pipelines, and data science.",
   url: siteUrl,
-  image: `${siteUrl}/photo3.png`,
+  image: `${siteUrl}/wojciech-aniszewski.png`,
   email: "mailto:wojtek1aniszewski1@gmail.com",
   sameAs: [
     "https://github.com/wojthor",
@@ -120,7 +130,7 @@ export const metadata: Metadata = {
     siteName: "Wojciech Aniszewski Portfolio",
     images: [
       {
-        url: `${siteUrl}/photo3.png`,
+        url: `${siteUrl}/wojciech-aniszewski.png`,
         width: 1280,
         height: 720,
         alt: "Wojciech Aniszewski - Freelance Developer",
@@ -133,7 +143,7 @@ export const metadata: Metadata = {
     title: "Wojciech Aniszewski - Freelance Developer",
     description:
       "Web developer from Gdańsk. React, Next.js, BigQuery, Data Studio, and Google Cloud Platform. Web apps, dashboards, and data pipelines.",
-    images: [`${siteUrl}/photo3.png`],
+    images: [`${siteUrl}/wojciech-aniszewski.png`],
   },
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],
@@ -147,8 +157,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" className="dark">
-      <body className={inter.className}>
+    <html lang="pl" className={`dark ${geist.variable} ${geistMono.variable}`}>
+      <body className={`${inter.className} antialiased`}>
         <Script id="person-structured-data" type="application/ld+json">
           {JSON.stringify(structuredData)}
         </Script>

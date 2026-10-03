@@ -12,7 +12,7 @@ export default function AboutSection() {
       <div className="mx-auto max-w-5xl space-y-8 md:space-y-10">
         <div className="text-center">
           <SectionBadge className="mb-5">{t.about.badge}</SectionBadge>
-          <h2 className="mt-5 text-2xl font-bold md:text-4xl">
+          <h2 className="mt-5 text-3xl font-semibold md:text-5xl">
             <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
               {t.about.title}
             </span>{" "}
@@ -23,12 +23,12 @@ export default function AboutSection() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_300px] lg:gap-12 lg:items-start">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-left text-base leading-relaxed text-gray-300 backdrop-blur-sm transition-all hover:border-[#F7011E]/40 md:p-6 md:text-lg">
+          <div className="surface surface-hover rounded-3xl p-5 text-left text-base leading-relaxed text-gray-300 md:p-8 md:text-lg">
             <p>{t.about.body}</p>
           </div>
 
           <div className="px-1 lg:px-0 lg:pt-1">
-            <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+            <p className="mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
               {t.about.experienceTitle}
             </p>
             <div className="relative space-y-0">
@@ -51,7 +51,7 @@ export default function AboutSection() {
                     }`}
                   />
                   <div className="min-w-0 flex-1 pt-0.5">
-                    <p className="text-xs font-medium uppercase tracking-wider text-[#F7011E]/80">
+                    <p className="font-mono text-xs font-medium uppercase tracking-wider text-[#F7011E]/80">
                       {item.period}
                     </p>
                     <p className="mt-1 text-base font-medium text-white">{item.role}</p>

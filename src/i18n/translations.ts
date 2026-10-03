@@ -153,10 +153,10 @@ export const translations: Record<Locale, Translations> = {
       experienceTitle: "Experience",
       experience: [
         {
-          period: "Apr 2026 - now",
+          period: "Apr 2026 - Jul 2026",
           role: "Junior Data Scientist",
           company: "Impel",
-          current: true,
+          current: false,
           logo: "/Logo_Impel_Group.jpg",
         },
         {
@@ -272,6 +272,24 @@ export const translations: Record<Locale, Translations> = {
           image: "/rental-rate.png",
           hidden: true,
         },
+        {
+          id: "06",
+          title: "FC PO NALEWCE OS",
+          shortDescription:
+            "Mobile club app for amateur side FC PO NALEWCE - squad, fixtures, league table, match centre, and player profiles on live data. Match video and photos sync from Google Drive to Bunny CDN; YouTube highlights are season-scoped; Gemini writes match reports from admin notes with lineup and bench on a pitch graphic.",
+          tech: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "SportsPress API",
+            "Google Drive API",
+            "Bunny.net",
+            "Gemini API",
+          ],
+          image: "/fc-po-nalewce-os.jpg",
+          visitUrl: "https://fc-po-nalewce.vercel.app",
+        },
       ],
     },
     offer: {
@@ -355,10 +373,10 @@ export const translations: Record<Locale, Translations> = {
       experienceTitle: "Doświadczenie",
       experience: [
         {
-          period: "kwi 2026 - obecnie",
+          period: "kwi 2026 - lip 2026",
           role: "Junior Data Scientist",
           company: "Impel",
-          current: true,
+          current: false,
           logo: "/Logo_Impel_Group.jpg",
         },
         {
@@ -473,6 +491,24 @@ export const translations: Record<Locale, Translations> = {
           tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
           image: "/rental-rate.png",
           hidden: true,
+        },
+        {
+          id: "06",
+          title: "FC PO NALEWCE OS",
+          shortDescription:
+            "Mobilna aplikacja klubowa dla amatorskiej drużyny FC PO NALEWCE - kadra, terminarz, tabela, centrum meczu i profile zawodników na żywych danych. Nagrania i zdjęcia z Google Drive trafiają na Bunny CDN; skróty YouTube są podzielone na sezony; Gemini pisze relacje z notatek admina ze składem i ławką na boisku.",
+          tech: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "SportsPress API",
+            "Google Drive API",
+            "Bunny.net",
+            "Gemini API",
+          ],
+          image: "/fc-po-nalewce-os.jpg",
+          visitUrl: "https://fc-po-nalewce.vercel.app",
         },
       ],
     },
