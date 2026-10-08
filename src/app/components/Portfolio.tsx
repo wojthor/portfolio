@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type MouseEvent } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { PortfolioProject } from "@/i18n/translations";
@@ -8,29 +8,62 @@ import { AccentChip, SectionBadge } from "@/app/components/brand-badge";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
 const AUTO_PLAY_MS = 5000;
-const IMAGE_ROTATE_MS = 2800;
+const IMAGE_ROTATE_MS = 1800;
 
 function BrowserMockup({
   project,
   paused,
+  prevLabel,
+  nextLabel,
+  slideLabel,
 }: {
   project: PortfolioProject;
   paused: boolean;
+  prevLabel: string;
+  nextLabel: string;
+  slideLabel: string;
 }) {
   const frames = project.images?.length ? project.images : [project.image];
+  const multi = frames.length > 1;
   const [frameIndex, setFrameIndex] = useState(0);
+  const [rotationKey, setRotationKey] = useState(0);
 
   useEffect(() => {
     setFrameIndex(0);
+    setRotationKey(0);
   }, [project.id]);
 
   useEffect(() => {
-    if (paused || frames.length < 2) return;
+    if (paused || !multi) return;
     const timer = window.setInterval(() => {
       setFrameIndex((prev) => (prev + 1) % frames.length);
     }, IMAGE_ROTATE_MS);
     return () => window.clearInterval(timer);
-  }, [paused, frames.length, project.id]);
+  }, [paused, multi, frames.length, project.id, rotationKey]);
+
+  const goToFrame = useCallback(
+    (index: number) => {
+      setFrameIndex(index);
+      setRotationKey((key) => key + 1);
+    },
+    []
+  );
+
+  const prevFrame = useCallback(
+    (event: MouseEvent<HTMLButtonElement>) => {
+      event.stopPropagation();
+      goToFrame((frameIndex - 1 + frames.length) % frames.length);
+    },
+    [frameIndex, frames.length, goToFrame]
+  );
+
+  const nextFrame = useCallback(
+    (event: MouseEvent<HTMLButtonElement>) => {
+      event.stopPropagation();
+      goToFrame((frameIndex + 1) % frames.length);
+    },
+    [frameIndex, frames.length, goToFrame]
+  );
 
   return (
     <div className="w-full overflow-hidden rounded-t-2xl border border-b-0 border-white/10 bg-black/40 shadow-[0_-20px_80px_-30px_rgba(247,1,30,0.35)]">
@@ -53,6 +86,46 @@ function BrowserMockup({
             priority={project.id === "01" || (project.id === "02" && index === 0)}
           />
         ))}
+
+        {multi && (
+          <>
+            <button
+              type="button"
+              onClick={prevFrame}
+              aria-label={prevLabel}
+              className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white backdrop-blur-sm transition-colors hover:border-[#F7011E] hover:bg-[#F7011E] md:left-3 md:h-10 md:w-10"
+            >
+              <ChevronLeft className="h-4 w-4 md:h-5 md:w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={nextFrame}
+              aria-label={nextLabel}
+              className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white backdrop-blur-sm transition-colors hover:border-[#F7011E] hover:bg-[#F7011E] md:right-3 md:h-10 md:w-10"
+            >
+              <ChevronRight className="h-4 w-4 md:h-5 md:w-5" />
+            </button>
+            <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-white/15 bg-black/50 px-2.5 py-1.5 backdrop-blur-sm">
+              {frames.map((src, index) => (
+                <button
+                  key={src}
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    goToFrame(index);
+                  }}
+                  aria-label={`${slideLabel} ${index + 1}`}
+                  aria-current={index === frameIndex ? "true" : undefined}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    index === frameIndex
+                      ? "w-5 bg-[#F7011E]"
+                      : "w-1.5 bg-white/35 hover:bg-white/60"
+                  }`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -214,7 +287,13 @@ export default function Portfolio() {
                   visible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <BrowserMockup project={project} paused={paused} />
+                <BrowserMockup
+                  project={project}
+                  paused={paused}
+                  prevLabel={t.slider.prev}
+                  nextLabel={t.slider.next}
+                  slideLabel={t.slider.slide}
+                />
               </div>
             </div>
           </div>
