@@ -75,7 +75,11 @@ export default function HeroSection() {
               className="surface rounded-full px-5 py-4 text-sm font-semibold text-gray-200 transition-all hover:-translate-y-0.5 hover:border-[#F7011E]/50 hover:bg-transparent hover:text-white md:px-9 md:py-7 md:text-base"
               asChild
             >
-              <a href="/wojciech-aniszewski cv-2026.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href={encodeURI("/WOJCIECH ANISZEWSKI-CV.pdf.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download className="mr-2 h-4 w-4 md:mr-2.5 md:h-5 md:w-5" />
                 {t.hero.downloadResume}
               </a>
