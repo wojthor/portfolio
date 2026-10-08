@@ -9,6 +9,8 @@ export type PortfolioProject = {
   shortDescription: string;
   tech: string[];
   image: string;
+  /** Extra screens that rotate in the mockup (first frame can match `image`). */
+  images?: string[];
   visitUrl?: string;
   reviewAnchor?: string;
   hidden?: boolean;
@@ -231,6 +233,25 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           id: "02",
+          title: "Zaliczone",
+          shortDescription:
+            "Operations platform for a tutoring agency - tutor schedule, lesson verification, monthly payouts, and ewidencja PDFs on one side; admin recruitment, accounting, and teacher management on the other. Applications come in through a Google Form, tutor documents live on Google Drive, and invite emails go out via Resend.",
+          tech: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Supabase",
+            "Tailwind CSS",
+            "Resend",
+            "Google APIs (Drive + Forms webhook)",
+            "Vercel",
+          ],
+          image: "/zaliczone.png",
+          images: ["/zaliczone.png", "/zaliczone1.png", "/zaliczone2.png"],
+          visitUrl: "https://www.zaliczone.edu.pl",
+        },
+        {
+          id: "03",
           title: "Base Camp",
           shortDescription:
             "Modern headless e-commerce with Next.js and Stripe checkout. Product catalog managed in Hygraph CMS via GraphQL.",
@@ -246,7 +267,7 @@ export const translations: Record<Locale, Translations> = {
           visitUrl: "https://next13-masters-test.vercel.app",
         },
         {
-          id: "03",
+          id: "04",
           title: "Glob Travel Agency",
           shortDescription:
             "Travel agency portal with dynamic content via GraphQL and Hygraph. Fast Next.js frontend for frequent updates.",
@@ -255,7 +276,7 @@ export const translations: Record<Locale, Translations> = {
           hidden: true,
         },
         {
-          id: "04",
+          id: "05",
           title: "StudioRE",
           shortDescription:
             "Interior design studio website with animations and interactive elements. In collaboration with wilczynska.visuals - currently in progress.",
@@ -264,7 +285,7 @@ export const translations: Record<Locale, Translations> = {
           inProgress: true,
         },
         {
-          id: "05",
+          id: "06",
           title: "Rental Rate",
           shortDescription:
             "Tenant review platform powered by PostgreSQL and Prisma. Landlord ratings, user profiles, and scalable backend workflows.",
@@ -273,7 +294,7 @@ export const translations: Record<Locale, Translations> = {
           hidden: true,
         },
         {
-          id: "06",
+          id: "07",
           title: "FC PO NALEWCE OS",
           shortDescription:
             "Mobile club app for amateur side FC PO NALEWCE - squad, fixtures, league table, match centre, and player profiles on live data. Match video and photos sync from Google Drive to Bunny CDN; YouTube highlights are season-scoped; Gemini writes match reports from admin notes with lineup and bench on a pitch graphic.",
@@ -289,24 +310,6 @@ export const translations: Record<Locale, Translations> = {
           ],
           image: "/fc-po-nalewce-os.jpg",
           visitUrl: "https://fc-po-nalewce.vercel.app",
-        },
-        {
-          id: "07",
-          title: "Zaliczone",
-          shortDescription:
-            "Operations platform for a tutoring agency - tutor schedule, lesson verification, monthly payouts, and ewidencja PDFs on one side; admin recruitment, accounting, and teacher management on the other. Built end-to-end with Supabase auth/roles, Google Forms → webhook hiring pipeline, Resend invite emails, and Google Drive document folders. Live at zaliczone.edu.pl.",
-          tech: [
-            "Next.js",
-            "React",
-            "TypeScript",
-            "Supabase",
-            "Tailwind CSS",
-            "Resend",
-            "Google APIs (Drive + Forms webhook)",
-            "Vercel",
-          ],
-          image: "/zaliczone.png",
-          visitUrl: "https://zaliczone.edu.pl",
         },
       ],
     },
@@ -469,6 +472,25 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           id: "02",
+          title: "Zaliczone",
+          shortDescription:
+            "Platforma operacyjna dla agencji korepetycji - po stronie nauczyciela terminarz, weryfikacja lekcji, finanse i PDF ewidencji; po stronie admina rekrutacja, księgowość i zarządzanie kadrą. Kandydaci wpływają z formularza Google, dokumenty nauczycieli lądują na Dysku Google, a zaproszenia do systemu idą mailem przez Resend.",
+          tech: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Supabase",
+            "Tailwind CSS",
+            "Resend",
+            "Google APIs (Drive + Forms webhook)",
+            "Vercel",
+          ],
+          image: "/zaliczone.png",
+          images: ["/zaliczone.png", "/zaliczone1.png", "/zaliczone2.png"],
+          visitUrl: "https://www.zaliczone.edu.pl",
+        },
+        {
+          id: "03",
           title: "Base Camp",
           shortDescription:
             "Nowoczesny sklep headless z Next.js i płatnościami Stripe. Katalog produktów w Hygraph CMS przez GraphQL.",
@@ -484,7 +506,7 @@ export const translations: Record<Locale, Translations> = {
           visitUrl: "https://next13-masters-test.vercel.app",
         },
         {
-          id: "03",
+          id: "04",
           title: "Glob Travel Agency",
           shortDescription:
             "Portal biura podróży z dynamiczną treścią przez GraphQL i Hygraph. Szybki frontend Next.js pod częste aktualizacje.",
@@ -493,7 +515,7 @@ export const translations: Record<Locale, Translations> = {
           hidden: true,
         },
         {
-          id: "04",
+          id: "05",
           title: "StudioRE",
           shortDescription:
             "Strona studia wnętrz z animacjami i interakcjami. We współpracy z wilczynska.visuals - w trakcie realizacji.",
@@ -502,7 +524,7 @@ export const translations: Record<Locale, Translations> = {
           inProgress: true,
         },
         {
-          id: "05",
+          id: "06",
           title: "Rental Rate",
           shortDescription:
             "Platforma ocen wynajmujących oparta na PostgreSQL i Prisma. Recenzje, profile użytkowników i skalowalny backend.",
@@ -511,7 +533,7 @@ export const translations: Record<Locale, Translations> = {
           hidden: true,
         },
         {
-          id: "06",
+          id: "07",
           title: "FC PO NALEWCE OS",
           shortDescription:
             "Mobilna aplikacja klubowa dla amatorskiej drużyny FC PO NALEWCE - kadra, terminarz, tabela, centrum meczu i profile zawodników na żywych danych. Nagrania i zdjęcia z Google Drive trafiają na Bunny CDN; skróty YouTube są podzielone na sezony; Gemini pisze relacje z notatek admina ze składem i ławką na boisku.",
@@ -527,24 +549,6 @@ export const translations: Record<Locale, Translations> = {
           ],
           image: "/fc-po-nalewce-os.jpg",
           visitUrl: "https://fc-po-nalewce.vercel.app",
-        },
-        {
-          id: "07",
-          title: "Zaliczone",
-          shortDescription:
-            "Platforma operacyjna dla agencji korepetycji - po stronie nauczyciela terminarz, weryfikacja lekcji, finanse i PDF ewidencji; po stronie admina rekrutacja, księgowość i zarządzanie kadrą. Całość z auth/rolami w Supabase, pipeline'em Google Forms → webhook, mailami zaproszeń (Resend) i folderami dokumentów na Google Drive. Na żywo: zaliczone.edu.pl.",
-          tech: [
-            "Next.js",
-            "React",
-            "TypeScript",
-            "Supabase",
-            "Tailwind CSS",
-            "Resend",
-            "Google APIs (Drive + Forms webhook)",
-            "Vercel",
-          ],
-          image: "/zaliczone.png",
-          visitUrl: "https://zaliczone.edu.pl",
         },
       ],
     },

@@ -8,8 +8,30 @@ import { AccentChip, SectionBadge } from "@/app/components/brand-badge";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
 const AUTO_PLAY_MS = 5000;
+const IMAGE_ROTATE_MS = 2800;
 
-function BrowserMockup({ project }: { project: PortfolioProject }) {
+function BrowserMockup({
+  project,
+  paused,
+}: {
+  project: PortfolioProject;
+  paused: boolean;
+}) {
+  const frames = project.images?.length ? project.images : [project.image];
+  const [frameIndex, setFrameIndex] = useState(0);
+
+  useEffect(() => {
+    setFrameIndex(0);
+  }, [project.id]);
+
+  useEffect(() => {
+    if (paused || frames.length < 2) return;
+    const timer = window.setInterval(() => {
+      setFrameIndex((prev) => (prev + 1) % frames.length);
+    }, IMAGE_ROTATE_MS);
+    return () => window.clearInterval(timer);
+  }, [paused, frames.length, project.id]);
+
   return (
     <div className="w-full overflow-hidden rounded-t-2xl border border-b-0 border-white/10 bg-black/40 shadow-[0_-20px_80px_-30px_rgba(247,1,30,0.35)]">
       <div className="flex h-8 items-center gap-1.5 border-b border-white/5 bg-white/[0.04] px-3">
@@ -18,14 +40,19 @@ function BrowserMockup({ project }: { project: PortfolioProject }) {
         <div className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
       </div>
       <div className="relative aspect-[2/1] w-full">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover object-top"
-          sizes="(max-width: 1024px) 100vw, 58vw"
-          priority={project.id === "01"}
-        />
+        {frames.map((src, index) => (
+          <Image
+            key={src}
+            src={src}
+            alt={project.title}
+            fill
+            className={`object-cover object-top transition-opacity duration-500 ${
+              index === frameIndex ? "opacity-100" : "opacity-0"
+            }`}
+            sizes="(max-width: 1024px) 100vw, 58vw"
+            priority={project.id === "01" || (project.id === "02" && index === 0)}
+          />
+        ))}
       </div>
     </div>
   );
@@ -187,7 +214,7 @@ export default function Portfolio() {
                   visible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <BrowserMockup project={project} />
+                <BrowserMockup project={project} paused={paused} />
               </div>
             </div>
           </div>
